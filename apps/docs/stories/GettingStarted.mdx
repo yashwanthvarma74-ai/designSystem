@@ -1,0 +1,75 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta
+  title="Getting started"
+  tags={['!autodocs', 'skip-visual']}
+  parameters={{ layout: 'padded' }}
+/>
+
+# Getting started
+
+## Install
+
+```bash
+npm install @meridian/react
+```
+
+React 18 or 19 is required. `react-aria-components` is installed with the package.
+
+## Add the styles and a theme
+
+Import the stylesheet once, near the root of your app. It already contains the design tokens.
+
+```tsx
+import '@meridian/react/styles.css';
+import { ThemeProvider, ToastProvider } from '@meridian/react';
+
+export function App({ children }: { children: React.ReactNode }) {
+  return (
+    <ThemeProvider defaultTheme="system">
+      <ToastProvider>{children}</ToastProvider>
+    </ThemeProvider>
+  );
+}
+```
+
+## Avoid a flash of the wrong theme
+
+Server-rendered apps should inline the tiny init script in `<head>`. It applies the saved theme before
+first paint.
+
+```tsx
+import { getThemeInitScript } from '@meridian/react';
+
+<script dangerouslySetInnerHTML={{ __html: getThemeInitScript() }} />;
+```
+
+## Import only what you need
+
+The package ships ESM with per-component entry points and is tree-shakeable.
+
+```tsx
+import { Button } from '@meridian/react/components/Button';
+```
+
+## Server rendering
+
+No component touches `window` or `document` at import time, ids come from `useId`, and the styles are
+plain CSS, so everything renders on the server and hydrates without mismatches.
+
+## Using the tokens directly
+
+```css
+.card {
+  background: var(--mrd-color-bg-surface);
+  border: 1px solid var(--mrd-color-border-subtle);
+  border-radius: var(--mrd-radius-lg);
+  padding: var(--mrd-space-4);
+}
+```
+
+```ts
+import { cssVar } from '@meridian/tokens';
+
+const style = { color: cssVar['color-text-secondary'] };
+```

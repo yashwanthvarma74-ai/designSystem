@@ -1,0 +1,99 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--mrd-font-family-sans);
+  color: var(--mrd-color-text-primary);
+}
+
+.rootVertical {
+  flex-direction: row;
+  gap: var(--mrd-space-6);
+}
+
+.list {
+  display: flex;
+  gap: var(--mrd-space-1);
+  border-bottom: var(--mrd-border-width-thin) solid var(--mrd-color-border-subtle);
+}
+
+.listVertical {
+  flex-direction: column;
+  border-bottom: 0;
+  border-right: var(--mrd-border-width-thin) solid var(--mrd-color-border-subtle);
+  min-width: 10rem;
+}
+
+.tab {
+  position: relative;
+  min-height: var(--mrd-size-control-md);
+  padding: 0 var(--mrd-space-4);
+  border: 0;
+  border-radius: var(--mrd-radius-md) var(--mrd-radius-md) 0 0;
+  background: transparent;
+  color: var(--mrd-color-text-secondary);
+  font: inherit;
+  font-size: var(--mrd-font-size-md);
+  font-weight: var(--mrd-font-weight-medium);
+  text-align: left;
+  cursor: pointer;
+  transition: color var(--mrd-motion-duration-fast) var(--mrd-motion-easing-standard);
+}
+
+.tab:hover:not(:disabled) {
+  color: var(--mrd-color-text-primary);
+  background: var(--mrd-color-bg-subtle);
+}
+.tab:disabled {
+  color: var(--mrd-color-text-disabled);
+  cursor: not-allowed;
+}
+
+.tab[data-state='active'] {
+  color: var(--mrd-color-accent-text);
+}
+
+.tab[data-state='active']::after {
+  content: '';
+  position: absolute;
+  right: var(--mrd-space-2);
+  bottom: -1px;
+  left: var(--mrd-space-2);
+  height: 2px;
+  border-radius: var(--mrd-radius-full);
+  background: var(--mrd-color-accent-default);
+}
+
+.listVertical .tab {
+  border-radius: var(--mrd-radius-md) 0 0 var(--mrd-radius-md);
+}
+.listVertical .tab[data-state='active']::after {
+  top: var(--mrd-space-2);
+  right: -1px;
+  bottom: var(--mrd-space-2);
+  left: auto;
+  width: 2px;
+  height: auto;
+}
+
+.tab:focus-visible,
+.panel:focus-visible {
+  outline: var(--mrd-focus-width) solid var(--mrd-color-focus-ring);
+  outline-offset: -2px;
+}
+
+.panel {
+  flex: 1;
+  padding: var(--mrd-space-4) 0;
+  font-size: var(--mrd-font-size-md);
+  line-height: var(--mrd-font-line-height-normal);
+}
+
+.panel[hidden] {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tab {
+    transition: none;
+  }
+}

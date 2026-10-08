@@ -1,0 +1,62 @@
+html,
+body {
+  margin: 0;
+  background: var(--mrd-color-bg-canvas);
+  color: var(--mrd-color-text-primary);
+  font-family: var(--mrd-font-family-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Storybook paints its own docs chrome, so keep story canvases on the theme surface. */
+.sb-show-main,
+.docs-story {
+  background: var(--mrd-color-bg-canvas);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Make the docs pages follow the theme too, instead of Storybook's fixed white. */
+.sbdocs.sbdocs-wrapper,
+.sbdocs .sbdocs-content {
+  background: var(--mrd-color-bg-canvas);
+  color: var(--mrd-color-text-primary);
+}
+
+.sbdocs h1,
+.sbdocs h2,
+.sbdocs h3,
+.sbdocs h4,
+.sbdocs p,
+.sbdocs li,
+.sbdocs td,
+.sbdocs th {
+  color: var(--mrd-color-text-primary);
+}
+
+.sbdocs h2 {
+  border-bottom-color: var(--mrd-color-border-subtle);
+}
+
+.sbdocs table tr {
+  background: var(--mrd-color-bg-surface);
+  border-top-color: var(--mrd-color-border-subtle);
+}
+
+.sbdocs table tr:nth-of-type(2n) {
+  background: var(--mrd-color-bg-subtle);
+}
+
+.sbdocs table td,
+.sbdocs table th {
+  border-color: var(--mrd-color-border-subtle);
+}
+
+.sbdocs :not(pre) > code {
+  background: var(--mrd-color-bg-muted);
+  border-color: var(--mrd-color-border-subtle);
+  color: var(--mrd-color-text-primary);
+}

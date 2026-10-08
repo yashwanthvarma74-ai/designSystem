@@ -1,0 +1,69 @@
+/* Shared look for text-like controls: Input, Textarea, Select and Combobox. */
+.control {
+  width: 100%;
+  min-width: 0;
+  border: var(--mrd-border-width-thin) solid var(--mrd-color-border-default);
+  border-radius: var(--mrd-radius-md);
+  background: var(--mrd-color-bg-surface);
+  color: var(--mrd-color-text-primary);
+  font-family: var(--mrd-font-family-sans);
+  font-size: var(--mrd-font-size-md);
+  line-height: var(--mrd-font-line-height-normal);
+  box-shadow: var(--mrd-shadow-xs);
+  transition:
+    border-color var(--mrd-motion-duration-fast) var(--mrd-motion-easing-standard),
+    box-shadow var(--mrd-motion-duration-fast) var(--mrd-motion-easing-standard);
+}
+
+.control::placeholder {
+  color: var(--mrd-color-text-tertiary);
+}
+
+.control:hover:not(:disabled):not([aria-invalid='true']) {
+  border-color: var(--mrd-color-border-strong);
+}
+
+.control:focus-visible {
+  outline: var(--mrd-focus-width) solid var(--mrd-color-focus-ring);
+  outline-offset: 0;
+  border-color: var(--mrd-color-focus-ring);
+}
+
+.control[aria-invalid='true'] {
+  border-color: var(--mrd-color-danger-solid);
+}
+.control[aria-invalid='true']:focus-visible {
+  outline-color: var(--mrd-color-danger-solid);
+}
+
+.control:disabled {
+  background: var(--mrd-color-bg-muted);
+  color: var(--mrd-color-text-disabled);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.control:read-only:not(:disabled) {
+  background: var(--mrd-color-bg-subtle);
+}
+
+.sm {
+  height: var(--mrd-size-control-sm);
+  padding: 0 var(--mrd-space-2);
+  font-size: var(--mrd-font-size-sm);
+}
+.md {
+  height: var(--mrd-size-control-md);
+  padding: 0 var(--mrd-space-3);
+}
+.lg {
+  height: var(--mrd-size-control-lg);
+  padding: 0 var(--mrd-space-4);
+  font-size: var(--mrd-font-size-lg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .control {
+    transition: none;
+  }
+}

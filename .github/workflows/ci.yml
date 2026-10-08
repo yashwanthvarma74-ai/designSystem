@@ -1,0 +1,98 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  checks:
+    name: Lint, types, tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - name: Lint and format
+        run: npm run lint
+      - name: Build tokens
+        run: npm run build -w @meridian/tokens
+      - name: Token contrast (WCAG 1.4.3 / 1.4.11)
+        run: npm run contrast
+      - name: Type check (strict)
+        run: npm run typecheck
+      - name: Unit, interaction and axe tests
+        run: npm run test:coverage
+      - name: Audit dependencies
+        run: npm audit --audit-level=high --omit=dev
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: coverage
+          path: packages/react/coverage
+
+  build:
+    name: Build and bundle budgets
+    runs-on: ubuntu-latest
+    needs: checks
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Bundle budget per component
+        run: npm run size
+
+  browser:
+    name: Storybook, axe and visual diff
+    runs-on: ubuntu-latest
+    needs: checks
+    container:
+      image: mcr.microsoft.com/playwright:v1.50.0-jammy
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Build Storybook
+        run: npm run build:docs
+      - name: Axe on every story, every theme, plus keyboard checks
+        run: npm run e2e -w @meridian/docs -- a11y keyboard
+      - name: Visual regression
+        if: hashFiles('apps/docs/e2e/__screenshots__/**') != ''
+        run: npm run e2e -w @meridian/docs -- visual
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: playwright-report
+          path: |
+            apps/docs/playwright-report
+            apps/docs/test-results
+
+  lighthouse:
+    name: Lighthouse accessibility
+    runs-on: ubuntu-latest
+    needs: checks
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: npm run build:docs
+      - run: npx lhci autorun

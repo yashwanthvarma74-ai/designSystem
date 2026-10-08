@@ -1,0 +1,45 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 26rem;
+  margin: 0 auto;
+  padding: var(--mrd-space-10) var(--mrd-space-6);
+  text-align: center;
+  font-family: var(--mrd-font-family-sans);
+}
+
+.iconWrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: var(--mrd-space-4);
+  border: var(--mrd-border-width-thin) solid var(--mrd-color-border-subtle);
+  border-radius: var(--mrd-radius-xl);
+  background: var(--mrd-color-bg-subtle);
+  color: var(--mrd-color-text-secondary);
+  box-shadow: var(--mrd-shadow-xs);
+}
+
+.title {
+  margin: 0;
+  color: var(--mrd-color-text-primary);
+  font-size: var(--mrd-font-size-lg);
+  font-weight: var(--mrd-font-weight-semibold);
+  line-height: var(--mrd-font-line-height-snug);
+}
+
+.description {
+  margin: var(--mrd-space-2) 0 0;
+  color: var(--mrd-color-text-secondary);
+  font-size: var(--mrd-font-size-md);
+  line-height: var(--mrd-font-line-height-normal);
+}
+
+.action {
+  margin-top: var(--mrd-space-5);
+  display: flex;
+  gap: var(--mrd-space-3);
+}

@@ -1,0 +1,194 @@
+[
+  {
+    "name": "Full library (index)",
+    "path": "packages/react/dist/index.js",
+    "limit": "22 kB",
+    "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
+  },
+  {
+    "name": "Accordion",
+    "path": "packages/react/dist/components/Accordion.js",
+    "limit": "2.5 kB",
+    "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
+  },
+  {
+    "name": "Alert",
+    "path": "packages/react/dist/components/Alert.js",
+    "limit": "2 kB",
+    "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
+  },
+  {
+    "name": "Avatar",
+    "path": "packages/react/dist/components/Avatar.js",
+    "limit": "2 kB",
+    "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
+  },
+  {
+    "name": "Badge",
+    "path": "packages/react/dist/components/Badge.js",
+    "limit": "2 kB",
+    "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
+  },
+  {
+    "name": "Breadcrumbs",
+    "path": "packages/react/dist/components/Breadcrumbs.js",
+    "limit": "2 kB",
+    "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
+  },
+  {
+    "name": "Button",
+    "path": "packages/react/dist/components/Button.js",
+    "limit": "2 kB",
+    "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
+  },
+  {
+    "name": "Card",
+    "path": "packages/react/dist/components/Card.js",
+    "limit": "2 kB",
+    "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
+  },
+  {
+    "name": "Checkbox",
+    "path": "packages/react/dist/components/Checkbox.js",
+    "limit": "2 kB",
+    "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
+  },
+  {
+    "name": "Combobox",
+    "path": "packages/react/dist/components/Combobox.js",
+    "limit": "3 kB",
+    "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
+  },
+  {
+    "name": "CommandPalette",
+    "path": "packages/react/dist/components/CommandPalette.js",
+    "limit": "5 kB",
+    "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
+  },
+  {
+    "name": "DataTable",
+    "path": "packages/react/dist/components/DataTable.js",
+    "limit": "5 kB",
+    "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
+  },
+  {
+    "name": "Dialog",
+    "path": "packages/react/dist/components/Dialog.js",
+    "limit": "3.5 kB",
+    "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
+  },
+  {
+    "name": "EmptyState",
+    "path": "packages/react/dist/components/EmptyState.js",
+    "limit": "2 kB",
+    "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
+  },
+  {
+    "name": "FormField",
+    "path": "packages/react/dist/components/FormField.js",
+    "limit": "2 kB",
+    "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
+  },
+  {
+    "name": "Icon",
+    "path": "packages/react/dist/components/Icon.js",
+    "limit": "2 kB",
+    "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
+  },
+  {
+    "name": "IconButton",
+    "path": "packages/react/dist/components/IconButton.js",
+    "limit": "2 kB",
+    "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
+  },
+  {
+    "name": "Input",
+    "path": "packages/react/dist/components/Input.js",
+    "limit": "2 kB",
+    "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
+  },
+  {
+    "name": "Menu",
+    "path": "packages/react/dist/components/Menu.js",
+    "limit": "2 kB",
+    "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
+  },
+  {
+    "name": "Popover",
+    "path": "packages/react/dist/components/Popover.js",
+    "limit": "3 kB",
+    "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
+  },
+  {
+    "name": "Progress",
+    "path": "packages/react/dist/components/Progress.js",
+    "limit": "2 kB",
+    "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
+  },
+  {
+    "name": "Radio",
+    "path": "packages/react/dist/components/Radio.js",
+    "limit": "2 kB",
+    "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
+  },
+  {
+    "name": "Select",
+    "path": "packages/react/dist/components/Select.js",
+    "limit": "2 kB",
+    "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
+  },
+  {
+    "name": "Separator",
+    "path": "packages/react/dist/components/Separator.js",
+    "limit": "2 kB",
+    "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
+  },
+  {
+    "name": "Skeleton",
+    "path": "packages/react/dist/components/Skeleton.js",
+    "limit": "2 kB",
+    "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
+  },
+  {
+    "name": "Spinner",
+    "path": "packages/react/dist/components/Spinner.js",
+    "limit": "2 kB",
+    "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
+  },
+  {
+    "name": "Switch",
+    "path": "packages/react/dist/components/Switch.js",
+    "limit": "2 kB",
+    "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
+  },
+  {
+    "name": "Tabs",
+    "path": "packages/react/dist/components/Tabs.js",
+    "limit": "2 kB",
+    "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
+  },
+  {
+    "name": "Textarea",
+    "path": "packages/react/dist/components/Textarea.js",
+    "limit": "2 kB",
+    "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
+  },
+  {
+    "name": "Toast",
+    "path": "packages/react/dist/components/Toast.js",
+    "limit": "3 kB",
+    "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
+  },
+  {
+    "name": "Tooltip",
+    "path": "packages/react/dist/components/Tooltip.js",
+    "limit": "2 kB",
+    "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
+  },
+  {
+    "name": "VisuallyHidden",
+    "path": "packages/react/dist/components/VisuallyHidden.js",
+    "limit": "2 kB",
+    "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
+  }
+]

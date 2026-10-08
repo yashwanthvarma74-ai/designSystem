@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Introduction" tags={['!autodocs', 'skip-visual']} parameters={{ layout: 'padded' }} />
+
+# Meridian
+
+Meridian is an accessible, tested and published React component library. It is the foundation the
+other four portfolio projects (Synapse, Atlas AI, MarketMesh and Pulse) are built with.
+
+Everything here follows the same idea: a component should be hard to use wrongly. Roles, ids,
+`aria-activedescendant` and keyboard handling are wired inside the library, so consumers get correct
+behaviour by default.
+
+## What is in the box
+
+- **Design tokens.** Colour, type, spacing, radius, shadow and motion live in one JSON source. Style
+  Dictionary compiles them into CSS variables and TypeScript types.
+- **Three themes.** Light, dark and high contrast, switched with a single `data-theme` attribute. A theme
+  change swaps CSS variables and never re-renders React.
+- **30+ components** in four tiers: foundations, primitives, composites and patterns.
+- **Keyboard first.** Roving focus, focus traps, and a visible focus ring on everything you can reach.
+- **Four kinds of tests.** Unit, interaction, accessibility and visual regression, all enforced in CI.
+- **Automated releases.** Changesets writes the changelog and publishes to npm with provenance.
+
+## Try these five things
+
+1. **Open Storybook.** Every component is documented, and the accessibility panel reports zero violations.
+2. **Switch themes.** Use the Theme control in the toolbar to flip between light, dark and high contrast.
+3. **Unplug the mouse.** Tab through the Combobox, Dialog and Menu. Focus is always visible.
+4. **Break a button.** Change a style and the visual regression job flags the diff and blocks the merge.
+5. **Ship it.** Merging a pull request with a changeset publishes a new npm version and changelog.
+
+## Component tiers
+
+Each tier only depends on the tiers below it.
+
+| Tier        | Components                                                                                                                  |
+| ----------- | --------------------------------------------------------------------------------------------------------------------------- |
+| Patterns    | DataTable (virtualized), CommandPalette, FormField, EmptyState                                                              |
+| Composites  | Combobox, Dialog, Popover, Menu, Tabs, Tooltip, Toast, Accordion, Alert, Card, Breadcrumbs                                  |
+| Primitives  | Button, IconButton, Input, Textarea, Checkbox, Radio, Switch, Select, Badge, Avatar, Spinner, Skeleton, Separator, Progress |
+| Foundations | Tokens for colour, type, spacing, radius, shadow and motion, plus icons                                                     |

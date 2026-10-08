@@ -1,0 +1,33 @@
+name: Update visual baselines
+
+# Screenshots depend on the OS and fonts, so baselines are always generated in the same
+# Playwright container the CI job uses. Run this from the Actions tab after an intended visual change.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  baselines:
+    runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/playwright:v1.50.0-jammy
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: npm run build:docs
+      - run: npm run e2e:update -w @meridian/docs
+      - name: Commit updated baselines
+        run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add apps/docs/e2e/__screenshots__
+          git diff --cached --quiet || git commit -m "test: update visual baselines"
+          git push

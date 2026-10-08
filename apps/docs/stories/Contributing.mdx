@@ -1,0 +1,55 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta
+  title="Guides/Contributing"
+  tags={['!autodocs', 'skip-visual']}
+  parameters={{ layout: 'padded' }}
+/>
+
+# Adding a component
+
+Every component lives in its own folder and carries its own tests and stories.
+
+```
+packages/react/src/components/Combobox/
+├─ Combobox.tsx          component + compound parts
+├─ Combobox.module.css   styles from CSS variables
+├─ Combobox.test.tsx     behaviour + axe checks
+├─ Combobox.stories.tsx  docs, controls, visual tests
+└─ index.ts              public exports
+```
+
+## Checklist
+
+1. **Build bottom-up.** A component may only use components from the tiers below it.
+2. **Use tokens.** No raw colours, sizes or durations in CSS. Everything comes from `--mrd-*` variables.
+3. **Compose, don't configure.** Prefer compound components over long prop lists. Support controlled and
+   uncontrolled use where it makes sense.
+4. **Make misuse hard.** Wire roles, ids and keyboard handling inside the component.
+5. **Write the tests.** Behaviour with `user-event`, plus an axe check for each visible state.
+6. **Write the stories.** One per meaningful state, with controls and a short note on keyboard use.
+7. **Honour motion preferences** with `@media (prefers-reduced-motion: reduce)`.
+8. **Export it** from `src/index.ts`.
+9. **Add a changeset** with `npm run changeset`, describing the impact (patch, minor or major).
+
+## Local commands
+
+```bash
+npm run storybook   # docs with live controls and the a11y panel
+npm test            # unit, interaction and axe tests
+npm run typecheck   # strict TypeScript
+npm run lint        # ESLint and Prettier
+npm run build       # tokens, then the library
+npm run size        # per-component bundle budgets
+npm run e2e         # browser axe + visual regression (after build:docs)
+```
+
+## Releasing
+
+Releases are automatic. Merge a pull request that contains a changeset and the release workflow opens a
+version PR. Merging that PR bumps versions, writes the changelog and publishes to npm with provenance.
+
+## Breaking changes
+
+Follow semver strictly. For a breaking change: add a major changeset, keep the old API for one minor
+release with a deprecation note when you can, and write the migration steps in the changeset.

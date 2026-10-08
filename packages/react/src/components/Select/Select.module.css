@@ -1,0 +1,20 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+.select {
+  appearance: none;
+  padding-right: var(--mrd-space-8);
+  cursor: pointer;
+}
+
+.chevron {
+  position: absolute;
+  top: 50%;
+  right: var(--mrd-space-3);
+  transform: translateY(-50%);
+  color: var(--mrd-color-text-tertiary);
+  pointer-events: none;
+}

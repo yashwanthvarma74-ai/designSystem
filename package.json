@@ -1,0 +1,42 @@
+{
+  "name": "meridian-design-system",
+  "private": true,
+  "type": "module",
+  "description": "Meridian: an accessible, tested, published React component library.",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "npm run build -w @meridian/tokens && npm run build -w @meridian/react",
+    "dev": "npm run storybook",
+    "storybook": "npm run storybook -w @meridian/docs",
+    "build:docs": "npm run build-storybook -w @meridian/docs",
+    "typecheck": "npm run typecheck -w @meridian/tokens && npm run typecheck -w @meridian/react",
+    "lint": "eslint . && prettier --check .",
+    "format": "prettier --write .",
+    "test": "npm run test -w @meridian/react",
+    "test:coverage": "npm run test:coverage -w @meridian/react",
+    "contrast": "npm run contrast -w @meridian/tokens",
+    "e2e": "npm run e2e -w @meridian/docs",
+    "size": "size-limit",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "npm run build && changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.0",
+    "@eslint/js": "^9.0.0",
+    "@size-limit/preset-small-lib": "^11.1.0",
+    "eslint": "^9.0.0",
+    "eslint-plugin-jsx-a11y": "^6.10.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "prettier": "^3.3.0",
+    "size-limit": "^11.1.0",
+    "typescript": "^5.6.0",
+    "typescript-eslint": "^8.0.0"
+  }
+}

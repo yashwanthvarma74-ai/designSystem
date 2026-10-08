@@ -1,0 +1,53 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta
+  title="Guides/Theming"
+  tags={['!autodocs', 'skip-visual']}
+  parameters={{ layout: 'padded' }}
+/>
+
+# Theming
+
+Themes are sets of CSS variables selected by a `data-theme` attribute on any element, normally `<html>`.
+
+| Theme         | Selector                        | Notes                                                   |
+| ------------- | ------------------------------- | ------------------------------------------------------- |
+| Light         | `:root`, `[data-theme='light']` | The default                                             |
+| Dark          | `[data-theme='dark']`           | Lifted surfaces, softer borders                         |
+| High contrast | `[data-theme='high-contrast']`  | Pure black and white, strong borders, yellow focus ring |
+
+## Switching without re-rendering
+
+`ThemeProvider` only flips the attribute. Colours come from the variables, so a theme change never
+causes React to re-render a component.
+
+```tsx
+import { useTheme } from '@meridian/react';
+
+function ThemeToggle() {
+  const { preference, setTheme } = useTheme();
+  return (
+    <select value={preference} onChange={(e) => setTheme(e.target.value as never)}>
+      <option value="system">System</option>
+      <option value="light">Light</option>
+      <option value="dark">Dark</option>
+      <option value="high-contrast">High contrast</option>
+    </select>
+  );
+}
+```
+
+`system` follows `prefers-color-scheme` and `prefers-contrast: more`.
+
+## Scoping a theme
+
+Because it is just an attribute, you can theme one region of the page.
+
+```html
+<section data-theme="dark">…</section>
+```
+
+## Changing a token
+
+Edit the JSON in `packages/tokens/src`, run `npm run build`, and every component and every app that
+consumes the package picks it up. See the contribution guide for the full flow.

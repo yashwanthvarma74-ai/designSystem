@@ -1,0 +1,101 @@
+.group {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: var(--mrd-font-family-sans);
+}
+
+.legend {
+  padding: 0;
+  margin-bottom: var(--mrd-space-2);
+  color: var(--mrd-color-text-primary);
+  font-size: var(--mrd-font-size-md);
+  font-weight: var(--mrd-font-weight-medium);
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--mrd-space-2);
+}
+.horizontal {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--mrd-space-5);
+}
+
+.root {
+  position: relative;
+  display: inline-flex;
+  align-items: flex-start;
+  gap: var(--mrd-space-2);
+  font-size: var(--mrd-font-size-md);
+  color: var(--mrd-color-text-primary);
+  cursor: pointer;
+}
+
+.disabled {
+  cursor: not-allowed;
+  color: var(--mrd-color-text-disabled);
+}
+
+.input {
+  position: absolute;
+  width: 1.125rem;
+  height: 1.125rem;
+  margin: 0;
+  opacity: 0;
+  cursor: inherit;
+}
+
+.circle {
+  flex-shrink: 0;
+  width: 1.125rem;
+  height: 1.125rem;
+  margin-top: 0.1rem;
+  border: var(--mrd-border-width-thin) solid var(--mrd-color-border-strong);
+  border-radius: var(--mrd-radius-full);
+  background: var(--mrd-color-bg-surface);
+  transition: border-color var(--mrd-motion-duration-fast) var(--mrd-motion-easing-standard);
+}
+
+.input:checked + .circle {
+  border: 5px solid var(--mrd-color-accent-default);
+}
+
+.root:hover .input:not(:disabled):not(:checked) + .circle {
+  border-color: var(--mrd-color-accent-default);
+}
+
+.input:focus-visible + .circle {
+  outline: var(--mrd-focus-width) solid var(--mrd-color-focus-ring);
+  outline-offset: var(--mrd-focus-offset);
+}
+
+.input:disabled + .circle {
+  border-color: var(--mrd-color-border-subtle);
+  background: var(--mrd-color-bg-muted);
+}
+.input:disabled:checked + .circle {
+  border-color: var(--mrd-color-text-disabled);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.label {
+  line-height: var(--mrd-font-line-height-snug);
+}
+.description {
+  color: var(--mrd-color-text-secondary);
+  font-size: var(--mrd-font-size-sm);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .circle {
+    transition: none;
+  }
+}

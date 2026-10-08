@@ -1,0 +1,80 @@
+.alert {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--mrd-space-3);
+  padding: var(--mrd-space-3) var(--mrd-space-4);
+  border: var(--mrd-border-width-thin) solid var(--alert-border);
+  border-radius: var(--mrd-radius-lg);
+  background: var(--alert-bg);
+  color: var(--mrd-color-text-primary);
+  font-family: var(--mrd-font-family-sans);
+}
+
+.info {
+  --alert-bg: var(--mrd-color-info-subtle);
+  --alert-border: var(--mrd-color-info-border);
+  --alert-accent: var(--mrd-color-info-text);
+}
+.success {
+  --alert-bg: var(--mrd-color-success-subtle);
+  --alert-border: var(--mrd-color-success-border);
+  --alert-accent: var(--mrd-color-success-text);
+}
+.warning {
+  --alert-bg: var(--mrd-color-warning-subtle);
+  --alert-border: var(--mrd-color-warning-border);
+  --alert-accent: var(--mrd-color-warning-text);
+}
+.danger {
+  --alert-bg: var(--mrd-color-danger-subtle);
+  --alert-border: var(--mrd-color-danger-border);
+  --alert-accent: var(--mrd-color-danger-text);
+}
+
+.icon {
+  margin-top: 1px;
+  color: var(--alert-accent);
+}
+.content {
+  flex: 1;
+  min-width: 0;
+}
+
+.title {
+  margin: 0;
+  color: var(--alert-accent);
+  font-size: var(--mrd-font-size-md);
+  font-weight: var(--mrd-font-weight-semibold);
+  line-height: var(--mrd-font-line-height-snug);
+}
+
+.body {
+  margin-top: var(--mrd-space-1);
+  color: var(--mrd-color-text-primary);
+  font-size: var(--mrd-font-size-md);
+  line-height: var(--mrd-font-line-height-normal);
+}
+.title:only-child {
+  margin: 0;
+}
+
+.close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--mrd-size-control-sm);
+  height: var(--mrd-size-control-sm);
+  margin: calc(var(--mrd-space-1) * -1) calc(var(--mrd-space-2) * -1) 0 0;
+  border: 0;
+  border-radius: var(--mrd-radius-md);
+  background: transparent;
+  color: var(--mrd-color-text-secondary);
+  cursor: pointer;
+}
+.close:hover {
+  background: var(--mrd-color-bg-muted);
+}
+.close:focus-visible {
+  outline: var(--mrd-focus-width) solid var(--mrd-color-focus-ring);
+  outline-offset: 1px;
+}

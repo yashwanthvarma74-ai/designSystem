@@ -1,0 +1,12 @@
+.textarea {
+  min-height: 5rem;
+  padding: var(--mrd-space-2) var(--mrd-space-3);
+  display: block;
+}
+
+.none {
+  resize: none;
+}
+.vertical {
+  resize: vertical;
+}

@@ -1,0 +1,49 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta
+  title="Guides/Accessibility"
+  tags={['!autodocs', 'skip-visual']}
+  parameters={{ layout: 'padded' }}
+/>
+
+# Accessibility
+
+Every component is tested against this WCAG 2.2 AA checklist.
+
+| Area            | Requirement                                          | WCAG          |
+| --------------- | ---------------------------------------------------- | ------------- |
+| Contrast        | 4.5:1 for body text, 3:1 for large text and UI parts | 1.4.3, 1.4.11 |
+| Keyboard        | Everything works without a mouse, with no traps      | 2.1.1, 2.1.2  |
+| Focus           | Always visible and never hidden by sticky UI         | 2.4.7, 2.4.11 |
+| Targets         | At least 24 by 24 CSS pixels                         | 2.5.8         |
+| Zoom and reflow | Usable at 200% zoom and 320 px wide                  | 1.4.4, 1.4.10 |
+| Screen readers  | Correct name, role and state                         | 4.1.2         |
+| Motion          | Honour `prefers-reduced-motion`                      | best practice |
+
+## How it is enforced
+
+- **Contrast** is checked from the token files for every text and UI pairing in all three themes
+  (`npm run contrast`).
+- **axe** runs on every component in unit tests, and on every story in every theme in a real browser.
+  The target is zero violations.
+- **Keyboard behaviour** is covered by interaction tests written with `user-event`.
+- **Focus** uses `:focus-visible` outlines drawn with design tokens, so the ring changes with the theme.
+- **Reduced motion** is honoured in every component that animates.
+
+## Focus management
+
+| Widget    | Pattern                                                                            |
+| --------- | ---------------------------------------------------------------------------------- |
+| Dialog    | Traps focus, makes the page inert, and restores focus to the trigger on close      |
+| Menu      | Roving focus between items; `Escape` closes and returns focus                      |
+| Combobox  | Focus stays in the input; `aria-activedescendant` points at the highlighted option |
+| Tabs      | Roving `tabindex`; arrow keys move, `Home` and `End` jump                          |
+| DataTable | One row in the tab order; arrow keys move between rows                             |
+| Toast     | Announced politely; errors use `role="alert"`; `F8` moves focus into the region    |
+
+## Manual check before a release
+
+1. Tab through the component with the mouse unplugged.
+2. Confirm the focus ring is visible in light, dark and high contrast.
+3. Zoom to 200% and resize to 320 px wide.
+4. Turn on a screen reader and confirm the name, role and state are announced.

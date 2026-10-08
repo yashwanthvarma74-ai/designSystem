@@ -1,0 +1,103 @@
+.root {
+  position: relative;
+  display: inline-flex;
+  align-items: flex-start;
+  gap: var(--mrd-space-2);
+  font-family: var(--mrd-font-family-sans);
+  font-size: var(--mrd-font-size-md);
+  color: var(--mrd-color-text-primary);
+  cursor: pointer;
+}
+
+.disabled {
+  cursor: not-allowed;
+  color: var(--mrd-color-text-disabled);
+}
+
+.input {
+  position: absolute;
+  width: 1.125rem;
+  height: 1.125rem;
+  margin: 0;
+  opacity: 0;
+  cursor: inherit;
+}
+
+.box {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 1.125rem;
+  height: 1.125rem;
+  margin-top: 0.1rem;
+  border: var(--mrd-border-width-thin) solid var(--mrd-color-border-strong);
+  border-radius: var(--mrd-radius-sm);
+  background: var(--mrd-color-bg-surface);
+  color: var(--mrd-color-accent-on-accent);
+  transition:
+    background-color var(--mrd-motion-duration-fast) var(--mrd-motion-easing-standard),
+    border-color var(--mrd-motion-duration-fast) var(--mrd-motion-easing-standard);
+}
+
+.check,
+.dash {
+  display: none;
+}
+
+.input:checked + .box,
+.input:indeterminate + .box {
+  border-color: var(--mrd-color-accent-default);
+  background: var(--mrd-color-accent-default);
+}
+
+.input:checked + .box .check {
+  display: block;
+}
+.input:indeterminate + .box .check {
+  display: none;
+}
+.input:indeterminate + .box .dash {
+  display: block;
+}
+
+.root:hover .input:not(:disabled) + .box {
+  border-color: var(--mrd-color-accent-default);
+}
+
+.input:focus-visible + .box {
+  outline: var(--mrd-focus-width) solid var(--mrd-color-focus-ring);
+  outline-offset: var(--mrd-focus-offset);
+}
+
+.input[aria-invalid='true'] + .box {
+  border-color: var(--mrd-color-danger-solid);
+}
+
+.input:disabled + .box {
+  border-color: var(--mrd-color-border-subtle);
+  background: var(--mrd-color-bg-muted);
+}
+.input:disabled:checked + .box {
+  background: var(--mrd-color-text-disabled);
+  border-color: transparent;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.label {
+  line-height: var(--mrd-font-line-height-snug);
+}
+.description {
+  color: var(--mrd-color-text-secondary);
+  font-size: var(--mrd-font-size-sm);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .box {
+    transition: none;
+  }
+}

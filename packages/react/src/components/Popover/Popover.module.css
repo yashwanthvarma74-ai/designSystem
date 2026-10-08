@@ -1,0 +1,32 @@
+.content {
+  position: fixed;
+  z-index: var(--mrd-z-popover);
+  min-width: 12rem;
+  max-width: min(24rem, calc(100vw - 1rem));
+  padding: var(--mrd-space-4);
+  border: var(--mrd-border-width-thin) solid var(--mrd-color-border-subtle);
+  border-radius: var(--mrd-radius-lg);
+  background: var(--mrd-color-bg-surface);
+  color: var(--mrd-color-text-primary);
+  font-family: var(--mrd-font-family-sans);
+  font-size: var(--mrd-font-size-md);
+  box-shadow: var(--mrd-shadow-lg);
+  animation: pop var(--mrd-motion-duration-fast) var(--mrd-motion-easing-decelerate);
+}
+
+.content:focus {
+  outline: none;
+}
+
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .content {
+    animation: none;
+  }
+}

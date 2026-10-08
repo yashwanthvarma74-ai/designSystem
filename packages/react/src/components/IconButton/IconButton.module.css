@@ -1,0 +1,13 @@
+/* Square buttons: padding is dropped and width follows the control height. */
+.square {
+  padding: 0;
+}
+.sm {
+  width: var(--mrd-size-control-sm);
+}
+.md {
+  width: var(--mrd-size-control-md);
+}
+.lg {
+  width: var(--mrd-size-control-lg);
+}
