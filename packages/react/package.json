@@ -3,6 +3,16 @@
   "version": "0.1.0",
   "description": "Meridian: accessible React components built on design tokens.",
   "license": "MIT",
+  "author": "Yashwanth",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yashwanthvarma74-ai/designSystem.git",
+    "directory": "packages/react"
+  },
+  "homepage": "https://yashwanthvarma74-ai.github.io/designSystem/",
+  "bugs": {
+    "url": "https://github.com/yashwanthvarma74-ai/designSystem/issues"
+  },
   "type": "module",
   "sideEffects": [
     "**/*.css"

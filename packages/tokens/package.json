@@ -3,6 +3,16 @@
   "version": "0.1.0",
   "description": "Design tokens for Meridian: colour, type, spacing, radius, shadow and motion.",
   "license": "MIT",
+  "author": "Yashwanth",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yashwanthvarma74-ai/designSystem.git",
+    "directory": "packages/tokens"
+  },
+  "homepage": "https://yashwanthvarma74-ai.github.io/designSystem/",
+  "bugs": {
+    "url": "https://github.com/yashwanthvarma74-ai/designSystem/issues"
+  },
   "type": "module",
   "files": [
     "dist"
