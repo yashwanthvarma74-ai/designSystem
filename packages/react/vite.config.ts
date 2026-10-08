@@ -8,11 +8,12 @@ import { defineConfig } from 'vitest/config';
 const here = path.dirname(fileURLToPath(import.meta.url));
 const componentsDir = path.join(here, 'src', 'components');
 
-// One entry per component folder, so consumers can import a single component.
+// One entry per component folder, so consumers can import a single component. Each one is written as
+// components/<Name>/index.js, next to its index.d.ts, so TypeScript finds the types for it.
 const componentEntries = Object.fromEntries(
   readdirSync(componentsDir, { withFileTypes: true })
     .filter((entry) => entry.isDirectory())
-    .map((entry) => [`components/${entry.name}`, path.join(componentsDir, entry.name, 'index.ts')]),
+    .map((entry) => [`components/${entry.name}/index`, path.join(componentsDir, entry.name, 'index.ts')]),
 );
 
 export default defineConfig({

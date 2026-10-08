@@ -31,7 +31,7 @@
     "./styles.css": "./dist/styles.css",
     "./components/*": {
       "types": "./dist/components/*/index.d.ts",
-      "import": "./dist/components/*.js"
+      "import": "./dist/components/*/index.js"
     }
   },
   "publishConfig": {
