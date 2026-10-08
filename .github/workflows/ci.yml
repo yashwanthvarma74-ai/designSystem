@@ -32,7 +32,7 @@ jobs:
         run: npm run test:coverage
       - name: Audit dependencies
         run: npm audit --audit-level=high --omit=dev
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v6
         if: always()
         with:
           name: coverage
@@ -74,7 +74,7 @@ jobs:
       - name: Visual regression
         if: hashFiles('apps/docs/e2e/__screenshots__/**') != ''
         run: npm run e2e -w @yashwanthvarma74/docs -- visual
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v6
         if: failure()
         with:
           name: playwright-report
