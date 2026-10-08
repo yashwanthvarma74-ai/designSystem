@@ -67,7 +67,7 @@ Screenshots are taken with fonts pinned, animations off, a fixed viewport and fi
 depends on the OS, so baselines are created and compared inside the Playwright container that CI uses:
 
 ```bash
-docker run --rm -v "$PWD":/work -w /work mcr.microsoft.com/playwright:v1.50.0-jammy \
+docker run --rm -v "$PWD":/work -w /work mcr.microsoft.com/playwright:v1.64.0-jammy \
   npm run e2e:update -w @meridian/docs
 ```
 

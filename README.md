@@ -86,7 +86,7 @@ Short records of why, with the options that were rejected, live in [docs/adr](do
 
 ## Benchmarks and how to reproduce them
 
-Measured on an Apple M4 Pro, macOS 27, Node 26, headless Chromium from Playwright 1.50, against the static
+Measured on an Apple M4 Pro, macOS 27, Node 26, headless Chromium from Playwright 1.64.0, against the static
 Storybook build. Nothing is estimated; each row says where it came from.
 
 | Target                                    | Result                                                          | How it was measured                     |
