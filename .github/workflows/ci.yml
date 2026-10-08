@@ -23,7 +23,7 @@ jobs:
       - name: Lint and format
         run: npm run lint
       - name: Build tokens
-        run: npm run build -w @meridian/tokens
+        run: npm run build -w @yashwanthvarma74/tokens
       - name: Token contrast (WCAG 1.4.3 / 1.4.11)
         run: npm run contrast
       - name: Type check (strict)
@@ -70,10 +70,10 @@ jobs:
       - name: Build Storybook
         run: npm run build:docs
       - name: Axe on every story, every theme, plus keyboard checks
-        run: npm run e2e -w @meridian/docs -- a11y keyboard
+        run: npm run e2e -w @yashwanthvarma74/docs -- a11y keyboard
       - name: Visual regression
         if: hashFiles('apps/docs/e2e/__screenshots__/**') != ''
-        run: npm run e2e -w @meridian/docs -- visual
+        run: npm run e2e -w @yashwanthvarma74/docs -- visual
       - uses: actions/upload-artifact@v4
         if: failure()
         with:

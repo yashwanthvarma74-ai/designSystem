@@ -1,5 +1,5 @@
 {
-  "name": "@meridian/react",
+  "name": "@yashwanthvarma74/react",
   "version": "0.0.0",
   "description": "Meridian: accessible React components built on design tokens.",
   "license": "MIT",
@@ -40,7 +40,7 @@
     "react-dom": "^18.2.0 || ^19.0.0"
   },
   "dependencies": {
-    "@meridian/tokens": "*",
+    "@yashwanthvarma74/tokens": "*",
     "react-aria-components": "^1.8.0"
   },
   "devDependencies": {

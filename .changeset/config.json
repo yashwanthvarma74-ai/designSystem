@@ -2,10 +2,10 @@
   "$schema": "https://unpkg.com/@changesets/config@3.0.0/schema.json",
   "changelog": "@changesets/cli/changelog",
   "commit": false,
-  "fixed": [["@meridian/tokens", "@meridian/react"]],
+  "fixed": [["@yashwanthvarma74/tokens", "@yashwanthvarma74/react"]],
   "linked": [],
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
-  "ignore": ["@meridian/docs"]
+  "ignore": ["@yashwanthvarma74/docs"]
 }

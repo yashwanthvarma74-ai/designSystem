@@ -4,7 +4,7 @@ An accessible, tested, published React component library. It is the foundation t
 projects (Synapse, Atlas AI, MarketMesh and Pulse) are built with.
 
 > **Demo video (60–90 s):** _to be recorded and linked here_ · **Storybook:** [yashwanthvarma74-ai.github.io/designSystem](https://yashwanthvarma74-ai.github.io/designSystem/) ·
-> **npm:** `@meridian/react`, `@meridian/tokens`
+> **npm:** `@yashwanthvarma74/react`, `@yashwanthvarma74/tokens`
 
 **Try it in five steps**
 
@@ -89,17 +89,17 @@ Short records of why, with the options that were rejected, live in [docs/adr](do
 Measured on an Apple M4 Pro, macOS 27, Node 26, headless Chromium from Playwright 1.64.0, against the static
 Storybook build. Nothing is estimated; each row says where it came from.
 
-| Target                                    | Result                                                          | How it was measured                     |
-| ----------------------------------------- | --------------------------------------------------------------- | --------------------------------------- |
-| axe violations across all stories         | **0** (88 stories × 3 themes = 264 runs)                        | `npm run e2e -w @meridian/docs -- a11y` |
-| Lighthouse accessibility on the docs site | **100** (3 of 3 runs)                                           | `npx lhci autorun`                      |
-| Test coverage on component logic          | **94.2%** lines, 81.1% branches, 115 tests                      | `npm run test:coverage`                 |
-| Interactive parts usable by keyboard      | Every interactive component has keyboard tests (unit + browser) | `e2e/keyboard.spec.ts`, `*.test.tsx`    |
-| Token contrast, WCAG 1.4.3 / 1.4.11       | **105 pairings pass** in all 3 themes                           | `npm run contrast`                      |
-| Bundle size, whole library                | **15.3 kB** minified + brotli                                   | `npm run size`                          |
-| Bundle size, one component (Button)       | **0.9 kB** minified + brotli                                    | `npm run size`                          |
-| Bundle budget per component               | Enforced: 2 kB, up to 5 kB for DataTable / CommandPalette       | `.size-limit.json`                      |
-| Visual regression sensitivity             | A one-line radius change on Button flagged **64** screenshots   | zero-tolerance diff, see below          |
+| Target                                    | Result                                                          | How it was measured                             |
+| ----------------------------------------- | --------------------------------------------------------------- | ----------------------------------------------- |
+| axe violations across all stories         | **0** (88 stories × 3 themes = 264 runs)                        | `npm run e2e -w @yashwanthvarma74/docs -- a11y` |
+| Lighthouse accessibility on the docs site | **100** (3 of 3 runs)                                           | `npx lhci autorun`                              |
+| Test coverage on component logic          | **94.2%** lines, 81.1% branches, 115 tests                      | `npm run test:coverage`                         |
+| Interactive parts usable by keyboard      | Every interactive component has keyboard tests (unit + browser) | `e2e/keyboard.spec.ts`, `*.test.tsx`            |
+| Token contrast, WCAG 1.4.3 / 1.4.11       | **105 pairings pass** in all 3 themes                           | `npm run contrast`                              |
+| Bundle size, whole library                | **15.3 kB** minified + brotli                                   | `npm run size`                                  |
+| Bundle size, one component (Button)       | **0.9 kB** minified + brotli                                    | `npm run size`                                  |
+| Bundle budget per component               | Enforced: 2 kB, up to 5 kB for DataTable / CommandPalette       | `.size-limit.json`                              |
+| Visual regression sensitivity             | A one-line radius change on Button flagged **64** screenshots   | zero-tolerance diff, see below                  |
 
 Sizes exclude `react`, `react-dom` and `react-aria-components`, which are peers or installed once.
 
@@ -118,7 +118,7 @@ Reproduce everything:
 npm install && npm run build
 npm run contrast && npm run typecheck && npm run test:coverage && npm run size
 npm run build:docs
-npm run e2e -w @meridian/docs -- a11y keyboard
+npm run e2e -w @yashwanthvarma74/docs -- a11y keyboard
 npx lhci autorun
 ```
 

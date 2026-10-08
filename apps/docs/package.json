@@ -1,5 +1,5 @@
 {
-  "name": "@meridian/docs",
+  "name": "@yashwanthvarma74/docs",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,12 +10,12 @@
     "e2e": "playwright test",
     "e2e:update": "playwright test visual --update-snapshots",
     "lighthouse": "lhci autorun",
-    "prestorybook": "npm run build -w @meridian/tokens",
-    "prebuild-storybook": "npm run build -w @meridian/tokens"
+    "prestorybook": "npm run build -w @yashwanthvarma74/tokens",
+    "prebuild-storybook": "npm run build -w @yashwanthvarma74/tokens"
   },
   "dependencies": {
-    "@meridian/react": "*",
-    "@meridian/tokens": "*",
+    "@yashwanthvarma74/react": "*",
+    "@yashwanthvarma74/tokens": "*",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },

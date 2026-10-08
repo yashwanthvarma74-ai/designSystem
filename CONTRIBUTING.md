@@ -48,16 +48,16 @@ npm run contrast   # checks every text and UI pairing in all three themes
 
 ## Checks every pull request must pass
 
-| Step                                                       | Command                                          |
-| ---------------------------------------------------------- | ------------------------------------------------ |
-| Lint and format                                            | `npm run lint`                                   |
-| Types (strict)                                             | `npm run typecheck`                              |
-| Unit, interaction and axe tests, 85%+ coverage on the code | `npm run test:coverage`                          |
-| Token contrast                                             | `npm run contrast`                               |
-| Bundle budgets                                             | `npm run size`                                   |
-| Axe on every story in every theme, keyboard checks         | `npm run e2e -w @meridian/docs -- a11y keyboard` |
-| Visual regression                                          | `npm run e2e -w @meridian/docs -- visual`        |
-| Lighthouse accessibility on the docs                       | `npx lhci autorun`                               |
+| Step                                                       | Command                                                  |
+| ---------------------------------------------------------- | -------------------------------------------------------- |
+| Lint and format                                            | `npm run lint`                                           |
+| Types (strict)                                             | `npm run typecheck`                                      |
+| Unit, interaction and axe tests, 85%+ coverage on the code | `npm run test:coverage`                                  |
+| Token contrast                                             | `npm run contrast`                                       |
+| Bundle budgets                                             | `npm run size`                                           |
+| Axe on every story in every theme, keyboard checks         | `npm run e2e -w @yashwanthvarma74/docs -- a11y keyboard` |
+| Visual regression                                          | `npm run e2e -w @yashwanthvarma74/docs -- visual`        |
+| Lighthouse accessibility on the docs                       | `npx lhci autorun`                                       |
 
 Any red step blocks the merge.
 
@@ -68,7 +68,7 @@ depends on the OS, so baselines are created and compared inside the Playwright c
 
 ```bash
 docker run --rm -v "$PWD":/work -w /work mcr.microsoft.com/playwright:v1.64.0-jammy \
-  npm run e2e:update -w @meridian/docs
+  npm run e2e:update -w @yashwanthvarma74/docs
 ```
 
 Commit the updated images together with the change that caused them.

@@ -11,7 +11,7 @@ import { Meta } from '@storybook/addon-docs/blocks';
 ## Install
 
 ```bash
-npm install @meridian/react
+npm install @yashwanthvarma74/react
 ```
 
 React 18 or 19 is required. `react-aria-components` is installed with the package.
@@ -21,8 +21,8 @@ React 18 or 19 is required. `react-aria-components` is installed with the packag
 Import the stylesheet once, near the root of your app. It already contains the design tokens.
 
 ```tsx
-import '@meridian/react/styles.css';
-import { ThemeProvider, ToastProvider } from '@meridian/react';
+import '@yashwanthvarma74/react/styles.css';
+import { ThemeProvider, ToastProvider } from '@yashwanthvarma74/react';
 
 export function App({ children }: { children: React.ReactNode }) {
   return (
@@ -39,7 +39,7 @@ Server-rendered apps should inline the tiny init script in `<head>`. It applies 
 first paint.
 
 ```tsx
-import { getThemeInitScript } from '@meridian/react';
+import { getThemeInitScript } from '@yashwanthvarma74/react';
 
 <script dangerouslySetInnerHTML={{ __html: getThemeInitScript() }} />;
 ```
@@ -49,7 +49,7 @@ import { getThemeInitScript } from '@meridian/react';
 The package ships ESM with per-component entry points and is tree-shakeable.
 
 ```tsx
-import { Button } from '@meridian/react/components/Button';
+import { Button } from '@yashwanthvarma74/react/components/Button';
 ```
 
 ## Server rendering
@@ -69,7 +69,7 @@ plain CSS, so everything renders on the server and hydrates without mismatches.
 ```
 
 ```ts
-import { cssVar } from '@meridian/tokens';
+import { cssVar } from '@yashwanthvarma74/tokens';
 
 const style = { color: cssVar['color-text-secondary'] };
 ```

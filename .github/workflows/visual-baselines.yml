@@ -22,7 +22,7 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: npm run build:docs
-      - run: npm run e2e:update -w @meridian/docs
+      - run: npm run e2e:update -w @yashwanthvarma74/docs
       - name: Commit updated baselines
         run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
