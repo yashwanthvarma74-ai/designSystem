@@ -1,6 +1,6 @@
 {
   "name": "@yashwanthvarma74/react",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Meridian: accessible React components built on design tokens.",
   "license": "MIT",
   "type": "module",
