@@ -3,7 +3,7 @@
 An accessible, tested, published React component library. It is the foundation the other four portfolio
 projects (Synapse, Atlas AI, MarketMesh and Pulse) are built with.
 
-> **Demo video (60–90 s):** _to be recorded and linked here_ · **Storybook:** _link after first deploy_ ·
+> **Demo video (60–90 s):** _to be recorded and linked here_ · **Storybook:** [yashwanthvarma74-ai.github.io/designSystem](https://yashwanthvarma74-ai.github.io/designSystem/) ·
 > **npm:** `@meridian/react`, `@meridian/tokens`
 
 **Try it in five steps**
