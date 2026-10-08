@@ -13,7 +13,10 @@ const componentsDir = path.join(here, 'src', 'components');
 const componentEntries = Object.fromEntries(
   readdirSync(componentsDir, { withFileTypes: true })
     .filter((entry) => entry.isDirectory())
-    .map((entry) => [`components/${entry.name}/index`, path.join(componentsDir, entry.name, 'index.ts')]),
+    .map((entry) => [
+      `components/${entry.name}/index`,
+      path.join(componentsDir, entry.name, 'index.ts'),
+    ]),
 );
 
 export default defineConfig({
