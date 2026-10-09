@@ -7,187 +7,187 @@
   },
   {
     "name": "Accordion",
-    "path": "packages/react/dist/components/Accordion.js",
+    "path": "packages/react/dist/components/Accordion/index.js",
     "limit": "2.5 kB",
     "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
   },
   {
     "name": "Alert",
-    "path": "packages/react/dist/components/Alert.js",
+    "path": "packages/react/dist/components/Alert/index.js",
     "limit": "2 kB",
     "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
   },
   {
     "name": "Avatar",
-    "path": "packages/react/dist/components/Avatar.js",
+    "path": "packages/react/dist/components/Avatar/index.js",
     "limit": "2 kB",
     "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
   },
   {
     "name": "Badge",
-    "path": "packages/react/dist/components/Badge.js",
+    "path": "packages/react/dist/components/Badge/index.js",
     "limit": "2 kB",
     "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
   },
   {
     "name": "Breadcrumbs",
-    "path": "packages/react/dist/components/Breadcrumbs.js",
+    "path": "packages/react/dist/components/Breadcrumbs/index.js",
     "limit": "2 kB",
     "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
   },
   {
     "name": "Button",
-    "path": "packages/react/dist/components/Button.js",
+    "path": "packages/react/dist/components/Button/index.js",
     "limit": "2 kB",
     "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
   },
   {
     "name": "Card",
-    "path": "packages/react/dist/components/Card.js",
+    "path": "packages/react/dist/components/Card/index.js",
     "limit": "2 kB",
     "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
   },
   {
     "name": "Checkbox",
-    "path": "packages/react/dist/components/Checkbox.js",
+    "path": "packages/react/dist/components/Checkbox/index.js",
     "limit": "2 kB",
     "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
   },
   {
     "name": "Combobox",
-    "path": "packages/react/dist/components/Combobox.js",
+    "path": "packages/react/dist/components/Combobox/index.js",
     "limit": "3 kB",
     "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
   },
   {
     "name": "CommandPalette",
-    "path": "packages/react/dist/components/CommandPalette.js",
+    "path": "packages/react/dist/components/CommandPalette/index.js",
     "limit": "5 kB",
     "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
   },
   {
     "name": "DataTable",
-    "path": "packages/react/dist/components/DataTable.js",
+    "path": "packages/react/dist/components/DataTable/index.js",
     "limit": "5 kB",
     "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
   },
   {
     "name": "Dialog",
-    "path": "packages/react/dist/components/Dialog.js",
+    "path": "packages/react/dist/components/Dialog/index.js",
     "limit": "3.5 kB",
     "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
   },
   {
     "name": "EmptyState",
-    "path": "packages/react/dist/components/EmptyState.js",
+    "path": "packages/react/dist/components/EmptyState/index.js",
     "limit": "2 kB",
     "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
   },
   {
     "name": "FormField",
-    "path": "packages/react/dist/components/FormField.js",
+    "path": "packages/react/dist/components/FormField/index.js",
     "limit": "2 kB",
     "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
   },
   {
     "name": "Icon",
-    "path": "packages/react/dist/components/Icon.js",
+    "path": "packages/react/dist/components/Icon/index.js",
     "limit": "2 kB",
     "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
   },
   {
     "name": "IconButton",
-    "path": "packages/react/dist/components/IconButton.js",
+    "path": "packages/react/dist/components/IconButton/index.js",
     "limit": "2 kB",
     "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
   },
   {
     "name": "Input",
-    "path": "packages/react/dist/components/Input.js",
+    "path": "packages/react/dist/components/Input/index.js",
     "limit": "2 kB",
     "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
   },
   {
     "name": "Menu",
-    "path": "packages/react/dist/components/Menu.js",
+    "path": "packages/react/dist/components/Menu/index.js",
     "limit": "2 kB",
     "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
   },
   {
     "name": "Popover",
-    "path": "packages/react/dist/components/Popover.js",
+    "path": "packages/react/dist/components/Popover/index.js",
     "limit": "3 kB",
     "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
   },
   {
     "name": "Progress",
-    "path": "packages/react/dist/components/Progress.js",
+    "path": "packages/react/dist/components/Progress/index.js",
     "limit": "2 kB",
     "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
   },
   {
     "name": "Radio",
-    "path": "packages/react/dist/components/Radio.js",
+    "path": "packages/react/dist/components/Radio/index.js",
     "limit": "2 kB",
     "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
   },
   {
     "name": "Select",
-    "path": "packages/react/dist/components/Select.js",
+    "path": "packages/react/dist/components/Select/index.js",
     "limit": "2 kB",
     "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
   },
   {
     "name": "Separator",
-    "path": "packages/react/dist/components/Separator.js",
+    "path": "packages/react/dist/components/Separator/index.js",
     "limit": "2 kB",
     "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
   },
   {
     "name": "Skeleton",
-    "path": "packages/react/dist/components/Skeleton.js",
+    "path": "packages/react/dist/components/Skeleton/index.js",
     "limit": "2 kB",
     "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
   },
   {
     "name": "Spinner",
-    "path": "packages/react/dist/components/Spinner.js",
+    "path": "packages/react/dist/components/Spinner/index.js",
     "limit": "2 kB",
     "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
   },
   {
     "name": "Switch",
-    "path": "packages/react/dist/components/Switch.js",
+    "path": "packages/react/dist/components/Switch/index.js",
     "limit": "2 kB",
     "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
   },
   {
     "name": "Tabs",
-    "path": "packages/react/dist/components/Tabs.js",
+    "path": "packages/react/dist/components/Tabs/index.js",
     "limit": "2 kB",
     "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
   },
   {
     "name": "Textarea",
-    "path": "packages/react/dist/components/Textarea.js",
+    "path": "packages/react/dist/components/Textarea/index.js",
     "limit": "2 kB",
     "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
   },
   {
     "name": "Toast",
-    "path": "packages/react/dist/components/Toast.js",
+    "path": "packages/react/dist/components/Toast/index.js",
     "limit": "3 kB",
     "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
   },
   {
     "name": "Tooltip",
-    "path": "packages/react/dist/components/Tooltip.js",
+    "path": "packages/react/dist/components/Tooltip/index.js",
     "limit": "2 kB",
     "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
   },
   {
     "name": "VisuallyHidden",
-    "path": "packages/react/dist/components/VisuallyHidden.js",
+    "path": "packages/react/dist/components/VisuallyHidden/index.js",
     "limit": "2 kB",
     "ignore": ["react", "react-dom", "react-aria-components", "react/jsx-runtime"]
   }
