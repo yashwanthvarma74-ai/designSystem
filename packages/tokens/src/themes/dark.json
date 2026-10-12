@@ -37,7 +37,7 @@
         "$value": "{palette.neutral.900}"
       },
       "link": {
-        "$value": "{palette.indigo.300}"
+        "$value": "{palette.blue.300}"
       }
     },
     "border": {
@@ -53,30 +53,30 @@
     },
     "accent": {
       "default": {
-        "$value": "{palette.indigo.500}"
+        "$value": "{palette.neutral.50}"
       },
       "hover": {
-        "$value": "{palette.indigo.400}"
+        "$value": "{palette.neutral.200}"
       },
       "active": {
-        "$value": "{palette.indigo.300}"
+        "$value": "{palette.neutral.300}"
       },
       "subtle": {
-        "$value": "rgba(99, 102, 241, 0.16)"
+        "$value": "rgba(255, 255, 255, 0.08)"
       },
       "subtleHover": {
-        "$value": "rgba(99, 102, 241, 0.26)"
+        "$value": "rgba(255, 255, 255, 0.14)"
       },
       "text": {
-        "$value": "{palette.indigo.300}"
+        "$value": "{palette.neutral.50}"
       },
       "onAccent": {
-        "$value": "{palette.neutral.1000}"
+        "$value": "{palette.neutral.900}"
       }
     },
     "focus": {
       "ring": {
-        "$value": "{palette.indigo.300}"
+        "$value": "{palette.blue.300}"
       }
     },
     "danger": {
@@ -126,16 +126,16 @@
     },
     "info": {
       "solid": {
-        "$value": "{palette.indigo.500}"
+        "$value": "{palette.blue.500}"
       },
       "subtle": {
-        "$value": "rgba(99, 102, 241, 0.16)"
+        "$value": "rgba(47, 129, 247, 0.16)"
       },
       "text": {
-        "$value": "{palette.indigo.300}"
+        "$value": "{palette.blue.300}"
       },
       "border": {
-        "$value": "rgba(129, 140, 248, 0.45)"
+        "$value": "rgba(96, 165, 250, 0.45)"
       }
     }
   },
