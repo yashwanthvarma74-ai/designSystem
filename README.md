@@ -4,7 +4,14 @@ An accessible, tested, published React component library. It is the foundation t
 projects (Synapse, Atlas AI, MarketMesh and Pulse) are built with.
 
 > **Demo video (60–90 s):** _to be recorded and linked here_ · **Storybook:** [yashwanthvarma74-ai.github.io/designSystem](https://yashwanthvarma74-ai.github.io/designSystem/) ·
-> **npm:** `@yashwanthvarma74/react`, `@yashwanthvarma74/tokens`
+> **npm:** [`@yashwanthvarma74/react`](https://www.npmjs.com/package/@yashwanthvarma74/react) ·
+> [`@yashwanthvarma74/tokens`](https://www.npmjs.com/package/@yashwanthvarma74/tokens)
+
+**Install**
+
+```bash
+npm install @yashwanthvarma74/react
+```
 
 **Try it in five steps**
 
@@ -109,8 +116,14 @@ animations off. It passed twice in a row unchanged and failed when Button's radi
 vary by OS, so baselines are generated in the Playwright container (`Update visual baselines` workflow) and
 the CI visual step runs once they are committed.
 
-**Not yet measured:** real npm download numbers (nothing is published yet) and a screen reader walkthrough on
-real devices. Run the manual checklist in Storybook under **Guides / Accessibility** before a release.
+**Published on npm.** Both packages are public with provenance, currently at version 0.2.0 (see the
+[react](https://www.npmjs.com/package/@yashwanthvarma74/react) and
+[tokens](https://www.npmjs.com/package/@yashwanthvarma74/tokens) pages). npm reported 22 and 23 downloads for
+the last week (27 Oct to 2 Nov 2026). Those numbers are not adoption: they include CI installs, mirrors and
+bots, and no other app has installed the library yet.
+
+**Not yet measured:** use in real apps, and a screen reader walkthrough on real devices. Run the manual
+checklist in Storybook under **Guides / Accessibility** before a release.
 
 Reproduce everything:
 
