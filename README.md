@@ -3,7 +3,7 @@
 An accessible, tested, published React component library. It is the foundation that Synapse and Atlas AI
 are built with.
 
-> **Storybook:** [yashwanthvarma74-ai.github.io/designSystem](https://yashwanthvarma74-ai.github.io/designSystem/) ·
+> **Storybook:** [yashwanthvarmakonduru.github.io/designSystem](https://yashwanthvarmakonduru.github.io/designSystem/) ·
 > **npm:** [`@yashwanthvarma74/react`](https://www.npmjs.com/package/@yashwanthvarma74/react) ·
 > [`@yashwanthvarma74/tokens`](https://www.npmjs.com/package/@yashwanthvarma74/tokens)
 

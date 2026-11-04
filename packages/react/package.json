@@ -6,12 +6,12 @@
   "author": "Yashwanth",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yashwanthvarma74-ai/designSystem.git",
+    "url": "git+https://github.com/yashwanthvarmakonduru/designSystem.git",
     "directory": "packages/react"
   },
-  "homepage": "https://yashwanthvarma74-ai.github.io/designSystem/",
+  "homepage": "https://yashwanthvarmakonduru.github.io/designSystem/",
   "bugs": {
-    "url": "https://github.com/yashwanthvarma74-ai/designSystem/issues"
+    "url": "https://github.com/yashwanthvarmakonduru/designSystem/issues"
   },
   "type": "module",
   "sideEffects": [
