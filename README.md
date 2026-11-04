@@ -1,9 +1,9 @@
 # Meridian
 
-An accessible, tested, published React component library. It is the foundation the other four portfolio
-projects (Synapse, Atlas AI, MarketMesh and Pulse) are built with.
+An accessible, tested, published React component library. It is the foundation that Synapse and Atlas AI
+are built with.
 
-> **Demo video (60–90 s):** _to be recorded and linked here_ · **Storybook:** [yashwanthvarma74-ai.github.io/designSystem](https://yashwanthvarma74-ai.github.io/designSystem/) ·
+> **Storybook:** [yashwanthvarma74-ai.github.io/designSystem](https://yashwanthvarma74-ai.github.io/designSystem/) ·
 > **npm:** [`@yashwanthvarma74/react`](https://www.npmjs.com/package/@yashwanthvarma74/react) ·
 > [`@yashwanthvarma74/tokens`](https://www.npmjs.com/package/@yashwanthvarma74/tokens)
 
@@ -34,8 +34,6 @@ flowchart LR
   CI --> NPM["npm package<br/>versioned by Changesets"]
   NPM --> S["Synapse<br/>slash menu, toolbar"]
   NPM --> A["Atlas AI<br/>chat, toasts, citations"]
-  NPM --> M["MarketMesh<br/>forms, data table"]
-  NPM --> P["Pulse<br/>virtual list, dialogs"]
 ```
 
 **From a token change to every app**
@@ -45,7 +43,7 @@ flowchart LR
 3. The pull request runs type checks, unit and interaction tests, axe, visual diffs and bundle budgets.
    Any failure blocks the merge.
 4. On merge, Changesets bumps the version, writes the changelog and publishes to npm with provenance.
-5. The four apps update the package and inherit the change.
+5. The apps update the package and inherit the change.
 
 ## What is in it
 
